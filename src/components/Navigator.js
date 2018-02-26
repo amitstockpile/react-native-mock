@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import createMockComponent from './createMockComponent';
 import View from './View';
+import {ViewPropTypes} from 'react-native';
 
 const NavigatorSceneConfigType = PropTypes.shape({
   gestures: PropTypes.object,
@@ -87,7 +88,7 @@ const Navigator = React.createClass({
     /**
      * Styles to apply to the container of each scene
      */
-    sceneStyle: View.propTypes.style,
+    sceneStyle: ViewPropTypes.style,
   },
 
   statics: {

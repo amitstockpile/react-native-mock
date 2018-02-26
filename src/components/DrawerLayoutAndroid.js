@@ -6,6 +6,7 @@ import NativeMethodsMixin from '../mixins/NativeMethodsMixin';
 import View from './View';
 import UIManager from '../NativeModules/UIManager';
 import ColorPropType from '../propTypes/ColorPropType';
+import {ViewPropTypes} from 'react-native';
 
 const ReactPropTypes = React.PropTypes;
 const DrawerConsts = UIManager.AndroidDrawerLayout.Constants;
@@ -13,7 +14,7 @@ const DrawerConsts = UIManager.AndroidDrawerLayout.Constants;
 const DrawerLayoutAndroid = React.createClass({
 
   propTypes: {
-    ...View.propTypes,
+    ...ViewPropTypes,
     /**
      * Determines whether the keyboard gets dismissed in response to a drag.
      *   - 'none' (the default), drags do not dismiss the keyboard.

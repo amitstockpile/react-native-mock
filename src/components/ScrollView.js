@@ -6,6 +6,7 @@ import View from './View';
 import ViewStylePropTypes from '../propTypes/ViewStylePropTypes';
 import ScrollViewManager from '../NativeModules/ScrollViewManager';
 import styleSheetPropType from '../propTypes/StyleSheetPropType';
+import {ViewPropTypes} from 'react-native';
 
 const { PropTypes } = React;
 
@@ -14,7 +15,7 @@ const INNERVIEW = 'InnerScrollView';
 
 const ScrollView = React.createClass({
   propTypes: {
-    ...View.propTypes,
+    ...ViewPropTypes,
     /**
      * Controls whether iOS should automatically adjust the content inset
      * for scroll views that are placed behind a navigation bar or

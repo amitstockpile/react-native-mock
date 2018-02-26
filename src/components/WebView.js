@@ -3,6 +3,7 @@ import React from 'react';
 import View from './View';
 import ScrollView from './ScrollView';
 import WebViewManager from '../NativeModules/WebViewManager';
+import {ViewPropTypes} from 'react-native';
 
 const { PropTypes } = React;
 
@@ -21,7 +22,7 @@ const JSNavigationScheme = WebViewManager.JSNavigationScheme;
 
 const WebView = React.createClass({
   propTypes: {
-    ...View.propTypes,
+    ...ViewPropTypes,
     url: PropTypes.string,
     html: PropTypes.string,
     /**
@@ -71,7 +72,7 @@ const WebView = React.createClass({
     contentInset: EdgeInsetsPropType,
     onNavigationStateChange: PropTypes.func,
     startInLoadingState: PropTypes.bool, // force WebView to show loadingView on first load
-    style: View.propTypes.style,
+    style: ViewPropTypes.style,
 
     /**
      * Used on Android only, JS is enabled by default for WebView on iOS
