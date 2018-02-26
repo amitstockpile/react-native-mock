@@ -5,12 +5,13 @@ import React from 'react';
 import NativeMethodsMixin from '../mixins/NativeMethodsMixin';
 import View from './View';
 import ColorPropType from '../propTypes/ColorPropType';
+import {ViewPropTypes} from 'react-native';
 
 const { PropTypes } = React;
 
 const ActivityIndicator = React.createClass({
   propTypes: {
-    ...View.propTypes,
+    ...ViewPropTypes,
     /**
      * Whether to show the indicator (true, the default) or hide it (false).
      */
